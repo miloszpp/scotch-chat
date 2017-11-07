@@ -1,0 +1,12 @@
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">ScotchChat</a>
+    <span *ngIf="userStream | async; let user; else showLogin">
+      <p class="navbar-text">Signed in as {{ user.name }}</p>
+      <button (click)="logout()" type="button" class="btn btn-default navbar-btn">Sign out</button>
+    </span>
+    <ng-template #showLogin>
+      <button (click)="login()" type="button" class="btn btn-default navbar-btn">Sign in</button>
+    </ng-template>
+  </div>
+</nav>

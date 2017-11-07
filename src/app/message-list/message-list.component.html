@@ -1,0 +1,15 @@
+<div class="panel panel-default">
+  <div class="panel-body">
+    <div class="row message" *ngFor="let message of messages | async" [ngClass]="{ 'my-message': message.author === user.name }">
+      <div class="col-sm-2">
+        {{ message.author }}
+      </div>
+      <div class="col-sm-8">
+        {{ message.content }}
+      </div>
+      <div class="col-sm-2">
+        {{ message.timestamp | date:"short" }}
+      </div>
+    </div>
+  </div>
+</div>

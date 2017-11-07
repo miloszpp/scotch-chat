@@ -1,0 +1,19 @@
+<div class="panel panel-default">
+  <div class="panel-body">
+    <form #form="ngForm" (ngSubmit)="sendMessage(form)">
+      <div class="row">
+        <div class="col-sm-9">
+          <input required
+                 type="text" 
+                 class="form-control" 
+                 name="content"
+                 placeholder="Type your message here..."
+                 ngModel>
+        </div>
+        <div class="col-sm-3">
+          <button [disabled]="form.invalid" type="submit" class="btn btn-block">Send</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>

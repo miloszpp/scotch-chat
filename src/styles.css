@@ -1,1 +1,15 @@
 /* You can add global styles to this file, and also import other style files */
+
+.message {
+    border-bottom: solid 1px gray;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.message:last-child {
+    border-bottom: none;
+}
+
+.my-message {
+    font-weight: bold;
+}
